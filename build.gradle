@@ -11,7 +11,9 @@ buildscript {
 
 apply plugin: 'com.uber.okbuck'
 
-allprojects {
+
+allprojects { project ->
+  project.apply from: rootProject.file('dependencies.gradle')
   repositories {
     jcenter()
     mavenCentral()
@@ -21,10 +23,3 @@ allprojects {
 task clean(type: Delete) {
   delete rootProject.buildDir
 }
-
-ext.deps = [
-    dagger2: [
-        dagger2: "com.google.dagger:dagger:2.7",
-        dagger2compiler: "com.google.dagger:dagger:2.7"
-    ]
-]
