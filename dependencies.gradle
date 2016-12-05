@@ -1,6 +1,6 @@
 ext.deps = [
     dagger2: [
         dagger2: "com.google.dagger:dagger:2.7",
-        dagger2compiler: "com.google.dagger:dagger:2.7"
+        dagger2compiler: "com.google.dagger:dagger-compiler:2.7"
     ]
 ]
