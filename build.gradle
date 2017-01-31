@@ -4,13 +4,12 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.2'
-    classpath 'com.uber:okbuck:0.10.1'
+    classpath 'com.android.tools.build:gradle:2.3.0-beta3'
+    classpath 'com.uber:okbuck:0.17.0'
   }
 }
 
 apply plugin: 'com.uber.okbuck'
-
 
 allprojects { project ->
   project.apply from: rootProject.file('dependencies.gradle')
