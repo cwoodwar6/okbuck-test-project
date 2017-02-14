@@ -5,11 +5,22 @@ buildscript {
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:2.3.0-beta3'
-    classpath 'com.uber:okbuck:0.17.0'
+    classpath 'com.uber:okbuck:0.17.3'
   }
 }
 
 apply plugin: 'com.uber.okbuck'
+
+okbuck {
+  Set<Project> projects = new HashSet<>();
+  for (Project module : project.subprojects) {
+    if (module.getName().equals("app-library")) {
+      continue;
+    }
+    projects.add(module);
+  }
+  buckProjects = projects;
+}
 
 allprojects { project ->
   project.apply from: rootProject.file('dependencies.gradle')
