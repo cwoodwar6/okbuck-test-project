@@ -1,7 +1,4 @@
 ext.deps = [
-    dagger2: [
-        dagger2: "com.google.dagger:dagger:2.8",
-        dagger2compiler: "com.google.dagger:dagger-compiler:2.8",
-        dagger2Test: "com.google.dagger:dagger:2.8:tests"
-    ]
+    junit: "junit:junit:4.12",
+    robolectric: "org.robolectric:robolectric:3.0"
 ]

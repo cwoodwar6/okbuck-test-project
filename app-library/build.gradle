@@ -20,7 +20,4 @@ android {
   }
 }
 
-dependencies {
-  compile deps.dagger2.dagger2
-  annotationProcessor deps.dagger2.dagger2compiler
-}
+dependencies {}
